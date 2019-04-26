@@ -1,4 +1,5 @@
 import axios from "axios";
+
 export default class Search {
   constructor(query) {
     this.query = query;
@@ -14,10 +15,12 @@ export default class Search {
           this.query
         }`
       );
-      //   console.log(res);
+      // console.log(res);
       this.result = res.data.recipes;
-      //   console.log(this.result);
-    } catch (error) {}
+      // console.log(this.result);
+    } catch (error) {
+      alert(error);
+    }
   }
 }
 
